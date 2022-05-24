@@ -1,1 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
+
+:root{
+  --var-red: hsl(0, 78%, 62%);
+  --var-cyan: hsl(180, 62%, 55%);
+  --var-orange: hsl(34, 97%, 64%);
+  --var-blue: hsl(212, 86%, 64%);
+  --var-very-dark-blue: hsl(234, 12%, 34%);
+  --var-grayish-blue: hsl(229, 6%, 66%);
+  --var-very-light-gray: hsl(0, 0%, 98%);
+
+}
+
+html {
+  box-sizing: border-box;
+ 
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin-top: auto;
+  margin-bottom: auto;
+  }
+
+body{
+  padding: 100px 150px 100px 150px; 
+  font-family: Poppins;
+  font-size: 15px;
+  background:  hsl(0, 0%, 98%);
+}
+
+.upcontainer{
+  text-align: center;
+  width: 500px;
+  margin:auto;
+}
+
+h1{
+  font-size: 32px;
+}
+#reliable{
+  font-weight: 200;
+}
+
+p{ 
+  color: var(--var-grayish-blue);
+  font-weight: 400;
+}
+
+.upcontainer p{
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 14px;
+}
+
+.gridcontainer{
+  display: grid;
+  grid-template: 220px 220px / 300px 300px 300px;
+  gap: 30px 30px;
+  justify-content: center;
+  margin-top: 180px;
+}
+
+.gridcontainer p {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.supervisor, .teambuilder, .karma, .calculator {
+  border-top: solid;
+  padding: 25px;
+  border-radius: 7px;
+  box-shadow: 0px 10px 10px hsl(229, 6%, 66%);
+  width: 100%;
+  height: 100%;
+}
+
+.supervisor{
+  border-top: solid  4px var(--var-cyan);
+  order: 1;
+}
+
+
+.teambuilder{
+  border-top: solid  4px var(--var-red);
+  order: 2;
+  position: relative;
+  bottom: 120px;
+}
+
+.karma{
+  border-top: solid  4px var(--var-orange);
+  order: 4;
+  position: relative;
+  left: 330px;
+  bottom: 120px;
+}
+
+.calculator{
+  border-top: solid  4px var(--var-blue);
+  order: 3;
+}
+
+img{
+  position: relative;
+  top: 40px;
+  left: 190px;
+  width: 55px;}
+
+
+footer {
+  text-align: center;
+}
+/* mobile version */
+
+@media (max-width: 500px) {
+  body{
+    padding: 50px 15px 30px 15px;
+  }
+  .teambuilder, .karma{
+    position: static;
+  }
+  .upcontainer{
+    width: 330px;
+   
+  }
+  .upcontainer p{
+    margin-top: 20px;}
+  
+  .gridcontainer{
+    grid-template: 230px 230px 230px 230px / 330px;
+    gap: 30px;
+    margin-top: 1px;
+    margin-bottom: 30px;
+  }
+  
+  .karma{
+    order: 3;
+  }
+  img{
+    left: 220px;
+    top: 40px;
+  }
+  h1{
+    font-size: 27px;
+  }
+  
+  h3{
+    font-size: 22px;
+  }
+  
+  .gridcontainer p{
+    font-size: 15px;
+  }
+}
